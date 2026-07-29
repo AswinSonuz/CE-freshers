@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="description" content="A clean, minimal, ultra-premium welcome note from Seniors to Juniors.">
+  <title>Welcome Juniors | Greeting Space</title>
+
+  <!-- Modern Fonts (Inter, Outfit, Space Mono & Playfair Display) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,400;1,600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Instant First-Boot Theme Detection Script -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var initialTheme = (saved === 'dark' || saved === 'light') ? saved : (systemDark ? 'dark' : 'light');
+        document.documentElement.classList.add(initialTheme + '-theme');
+      } catch (e) { }
+    })();
+  </script>
+</head>
+
+<body class="light-theme">
+
+  <!-- Initial Page Preloader / Splash Screen -->
+  <div id="initial-loader" class="page-preloader">
+    <div class="preloader-content">
+      <div class="circular-dot-spinner">
+        <div class="spinner-dot" style="--i: 0;"></div>
+        <div class="spinner-dot" style="--i: 1;"></div>
+        <div class="spinner-dot" style="--i: 2;"></div>
+        <div class="spinner-dot" style="--i: 3;"></div>
+        <div class="spinner-dot" style="--i: 4;"></div>
+        <div class="spinner-dot" style="--i: 5;"></div>
+        <div class="spinner-dot" style="--i: 6;"></div>
+        <div class="spinner-dot" style="--i: 7;"></div>
+      </div>
+      <div class="preloader-text">
+        <img src="logo.png" alt="Logo" class="preloader-logo-img">
+        <span class="subtext">Initializing Experience...</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Canvas Background -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Clean Top Header Bar -->
+  <header class="main-header">
+    <div class="header-container">
+      <div class="logo">
+        <img src="logo.png" alt="Logo" class="brand-logo-img">
+      </div>
+      <div class="header-actions">
+        <button id="theme-toggle" class="skeuo-toggle-switch" aria-label="Toggle Dark/Light Mode">
+          <div class="toggle-track">
+            <div class="toggle-thumb">
+              <div class="thumb-halo"></div>
+              <div class="thumb-core">
+                <i class="fa-solid fa-moon icon-moon"></i>
+                <i class="fa-solid fa-sun icon-sun"></i>
+              </div>
+            </div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Tactile Skeuomorphic Frame Container -->
+  <div class="skeuo-app-wrapper">
+    <div class="skeuo-app-frame">
+
+      <!-- Minimal Senior Welcome Note Card -->
+      <main class="minimal-welcome-main">
+        <section id="welcome" class="minimal-hero-section" data-scroll-reveal>
+          <div class="hero-bg-glow"></div>
+          <div class="container minimal-container">
+
+            <div class="premium-note-card">
+              <div class="card-glow-ambient"></div>
+
+              <div class="note-card-header">
+                <span class="badge">[ FROM YOUR SENIORS ]</span>
+              </div>
+
+              <h1 class="hero-title minimal-title">
+                CRAFTING EXCELLENCE <br>
+                <span class="serif-italic">with</span> <br>
+                <span class="gradient-text">SIMPLICITY & PRECISION</span>
+              </h1>
+
+              <div class="senior-message-box">
+                <i class="fa-solid fa-quote-left quote-icon-bg"></i>
+                <p class="hero-description senior-quote">
+                  "Welcome to the team, Juniors. We believe in building clean, minimal, and extraordinary things. Work
+                  hard, stay curious, and always push the boundary of quality. We're here to guide and elevate you every
+                  step of the way."
+                </p>
+                <div class="senior-signature">
+                  <span class="sig-title">— Warmly, Your Seniors</span>
+                  <span class="sig-subtitle">Senior Engineering & Design</span>
+                </div>
+              </div>
+
+              <div class="hero-buttons minimal-buttons">
+                <button id="celebrate-btn" class="btn btn-primary btn-skeuo">
+                  <span>Acknowledge & Celebrate</span>
+                  <i class="fa-solid fa-sparkles"></i>
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Civil Engineering Department Achievements Section -->
+        <section id="civil-achievements" class="minimal-hero-section" data-scroll-reveal>
+          <div class="container minimal-container">
+            <div class="premium-note-card achievements-note-card">
+              <div class="card-glow-ambient"></div>
+
+              <div class="note-card-header">
+                <span class="badge">[ DEPARTMENT ACHIEVEMENTS ]</span>
+              </div>
+
+              <h2 class="hero-title minimal-title">
+                CIVIL ENGINEERING <br>
+                <span class="serif-italic">legacy of</span> <br>
+                <span class="gradient-text">EXCELLENCE</span>
+              </h2>
+
+              <p class="hero-description senior-quote">
+                Celebrating groundbreaking innovations, national championship trophies, and structural engineering research led by our department seniors and faculty.
+              </p>
+
+              <!-- Vertical Achievements List (Skeleton Loading Placeholder) -->
+              <div class="achievements-card-list">
+                
+                <div class="achievement-item-card skeleton-card">
+                  <div class="achievement-img-wrap skeleton skeleton-img"></div>
+                  <div class="achievement-info">
+                    <div class="skeleton skeleton-tag"></div>
+                    <div class="skeleton skeleton-title"></div>
+                    <div class="skeleton skeleton-desc"></div>
+                    <div class="skeleton skeleton-desc-short"></div>
+                  </div>
+                </div>
+
+                <div class="achievement-item-card skeleton-card">
+                  <div class="achievement-img-wrap skeleton skeleton-img"></div>
+                  <div class="achievement-info">
+                    <div class="skeleton skeleton-tag"></div>
+                    <div class="skeleton skeleton-title"></div>
+                    <div class="skeleton skeleton-desc"></div>
+                    <div class="skeleton skeleton-desc-short"></div>
+                  </div>
+                </div>
+
+                <div class="achievement-item-card skeleton-card">
+                  <div class="achievement-img-wrap skeleton skeleton-img"></div>
+                  <div class="achievement-info">
+                    <div class="skeleton skeleton-tag"></div>
+                    <div class="skeleton skeleton-title"></div>
+                    <div class="skeleton skeleton-desc"></div>
+                    <div class="skeleton skeleton-desc-short"></div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- Instagram Connect Section (Reveals on Scroll) -->
+        <section id="instagram-section" class="minimal-hero-section" data-scroll-reveal>
+          <div class="container minimal-container">
+            <div class="premium-note-card instagram-note-card">
+              <div class="card-glow-ambient"></div>
+
+              <div class="note-card-header">
+                <span class="badge">[ CONNECT ON INSTAGRAM ]</span>
+              </div>
+
+              <h2 class="hero-title minimal-title">
+                JOIN OUR COMMUNITY <br>
+                <span class="serif-italic">on</span> <br>
+                <span class="gradient-text">INSTAGRAM</span>
+              </h2>
+
+              <p class="hero-description senior-quote">
+                Follow our official Instagram page for exclusive event updates, campus highlights, project showcases,
+                and stories.
+              </p>
+
+              <div class="hero-buttons minimal-buttons">
+                <a href="https://www.instagram.com/tharavadu_vidya/?hl=en" target="_blank" rel="noopener"
+                  class="btn btn-primary btn-skeuo insta-redirect-btn" id="insta-redirect-link">
+                  <i class="fa-brands fa-instagram"></i>
+                  <span>Visit Instagram Page</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- WhatsApp Group Section (Reveals on Scroll) -->
+        <section id="whatsapp-section" class="minimal-hero-section" data-scroll-reveal>
+          <div class="container minimal-container">
+            <div class="premium-note-card whatsapp-note-card">
+              <div class="card-glow-ambient"></div>
+
+              <div class="note-card-header">
+                <span class="badge">[ OFFICIAL WHATSAPP GROUP ]</span>
+              </div>
+
+              <h2 class="hero-title minimal-title">
+                JOIN<br>
+                <span class="serif-italic">the</span> <br>
+                <span class="gradient-text">WHATSAPP</span> <br>
+                <span class="serif-italic">community</span> <br>
+              </h2>
+
+              <p class="hero-description senior-quote">
+                Connect directly with your batchmates and seniors. Get real-time announcements, discussion threads, and
+                instant help.
+              </p>
+
+              <div class="hero-buttons minimal-buttons">
+                <a href="https://chat.whatsapp.com/" target="_blank" rel="noopener"
+                  class="btn btn-primary btn-skeuo wa-redirect-btn" id="wa-redirect-link">
+                  <i class="fa-brands fa-whatsapp"></i>
+                  <span>Join WhatsApp Group</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="main-footer">
+        <div class="container footer-container">
+          <div class="footer-left">
+            <div class="footer-brand-wrap">
+              <img src="logo.png" alt="Logo" class="footer-logo-img">
+            </div>
+            <p class="footer-copy">&copy; 2026 Senior Dev Team. Designed with precision & elegance.</p>
+          </div>
+          <div class="footer-right">
+            <div class="social-links">
+              <a href="https://chat.whatsapp.com/" target="_blank" rel="noopener" aria-label="WhatsApp Group"><i
+                  class="fa-brands fa-whatsapp"></i></a>
+              <a href="https://www.instagram.com/tharavadu_vidya/?hl=en" target="_blank" rel="noopener"
+                aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://github.com/AswinSonuz/CE-freshers.git" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div> <!-- /.skeuo-app-frame -->
+  </div> <!-- /.skeuo-app-wrapper -->
+
+  <!-- Floating Scroll Instagram Redirect Pill -->
+  <a href="https://www.instagram.com/tharavadu_vidya/?hl=en" target="_blank" rel="noopener" id="insta-scroll-pill"
+    class="insta-scroll-pill" aria-label="Visit Instagram Page">
+    <i class="fa-brands fa-instagram"></i>
+    <span class="pill-label">Follow on Instagram ↗</span>
+  </a>
+
+  <!-- Custom Scripts -->
+  <script src="script.js"></script>
+</body>
+
+</html>
