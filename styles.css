@@ -118,6 +118,94 @@ button, input, select, textarea {
   background: var(--text-muted);
 }
 
+/* --- Gemini-Style Glowing Background Orbs (Dark Mode Only) --- */
+.dark-glow-bg {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+body.dark-theme .dark-glow-bg {
+  display: block;
+}
+
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.13;
+  will-change: transform, opacity;
+}
+
+/* Orb 1 – Deep Emerald / Teal top-left */
+.glow-orb-1 {
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle at center, #10b981 0%, #059669 60%, transparent 100%);
+  top: -120px;
+  left: -100px;
+  animation: orbFloat1 14s ease-in-out infinite;
+}
+
+/* Orb 2 – Mint / Cyan center-right */
+.glow-orb-2 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle at center, #34d399 0%, #6ee7b7 50%, transparent 100%);
+  top: 30%;
+  right: -80px;
+  opacity: 0.09;
+  animation: orbFloat2 18s ease-in-out infinite;
+}
+
+/* Orb 3 – Soft Blue-Green bottom-left */
+.glow-orb-3 {
+  width: 460px;
+  height: 460px;
+  background: radial-gradient(circle at center, #047857 0%, #064e3b 55%, transparent 100%);
+  bottom: -100px;
+  left: 10%;
+  opacity: 0.11;
+  animation: orbFloat3 22s ease-in-out infinite;
+}
+
+/* Orb 4 – Bright Spearmint center pulse */
+.glow-orb-4 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle at center, #6ee7b7 0%, #10b981 50%, transparent 100%);
+  top: 55%;
+  left: 40%;
+  opacity: 0.07;
+  animation: orbPulse 9s ease-in-out infinite;
+}
+
+@keyframes orbFloat1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  30%       { transform: translate(40px, 60px) scale(1.08); }
+  60%       { transform: translate(-20px, 30px) scale(0.96); }
+}
+
+@keyframes orbFloat2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25%       { transform: translate(-50px, 40px) scale(1.1); }
+  70%       { transform: translate(20px, -30px) scale(0.94); }
+}
+
+@keyframes orbFloat3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  40%       { transform: translate(60px, -40px) scale(1.06); }
+  75%       { transform: translate(-30px, 20px) scale(0.98); }
+}
+
+@keyframes orbPulse {
+  0%, 100% { opacity: 0.07; transform: scale(1); }
+  50%       { opacity: 0.14; transform: scale(1.18); }
+}
+
 /* --- Initial Page Preloader Splash Animation --- */
 .page-preloader {
   position: fixed;
