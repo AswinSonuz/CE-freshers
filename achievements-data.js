@@ -11,27 +11,27 @@ const achievementsData = [
   {
     id: "A1",
     title: "",
-    desc: "Heartfelt congratulations to the entire team,"
+    desc: ""
   },
   {
     id: "A2",
-    title: "Advika '26",
-    desc: "Secured 2nd Position In Oppana."
+    title: "",
+    desc: ""
   },
   {
     id: "A3",
-    title: "Advika '26",
-    desc: "Secured 2nd Position In Mime."
+    title: "",
+    desc: ""
   },
   {
     id: "A4",
-    title: "Advika '26",
-    desc: "Secured 1st Position In Bharathanatyam."
+    title: "",
+    desc: ""
   },
   {
     id: "A5",
-    title: "APJAKTU Interzone",
-    desc: "Champions at the APJAKTU Interzone Kho-Kho Championship."
+    title: "",
+    desc: ""
   },
   {
     id: "A6",
@@ -40,13 +40,13 @@ const achievementsData = [
   },
   {
     id: "A7",
-    title: "Sports Meet",
-    desc: "Individual Champion"
+    title: "",
+    desc: ""
   },
   {
     id: "A8",
-    title: "Advika '26",
-    desc: "Secured 3rd Position In Kollukali."
+    title: "",
+    desc: ""
   },
   {
     id: "A9",
@@ -55,8 +55,8 @@ const achievementsData = [
   },
   {
     id: "A10",
-    title: "Annual Sports Meet",
-    desc: "Womens Overall & Mens Runner up."
+    title: "",
+    desc: ""
   },
   {
     id: "A11",
