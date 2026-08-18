@@ -2845,22 +2845,48 @@ body.light-theme .skeleton::after {
   border-color: var(--primary);
 }
 
-/* Image wrapper — fixed aspect ratio */
+/* Image wrapper — natural height so full poster is visible */
 .achievement-gallery-img-wrap {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;
   overflow: hidden;
   display: block;
+  background: var(--bg-primary);
 }
 
 .achievement-gallery-photo {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   display: block;
   transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.4s ease;
   filter: brightness(0.97) saturate(1.05);
+}
+
+/* Rotate A12 counter-clockwise (portrait poster laid sideways) */
+.achievement-gallery-photo.rotate-left {
+  transform: rotate(-90deg);
+  width: auto;
+  height: 100%;
+  max-width: none;
+  display: block;
+  margin: 0 auto;
+}
+
+.achievement-gallery-card.rotate-left-card .achievement-gallery-img-wrap {
+  aspect-ratio: 3 / 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.achievement-gallery-card.rotate-left-card .achievement-gallery-photo {
+  width: 133%;
+  height: auto;
+  transform: rotate(-90deg);
+  transform-origin: center center;
+  object-fit: cover;
 }
 
 .achievement-gallery-card:hover .achievement-gallery-photo {
@@ -2975,10 +3001,6 @@ body.light-theme .achievement-gallery-card:hover {
   .achievements-gallery-grid {
     grid-template-columns: 1fr;
     gap: 0.85rem;
-  }
-
-  .achievement-gallery-img-wrap {
-    aspect-ratio: 16 / 9;
   }
 
   .achievement-gallery-overlay {
