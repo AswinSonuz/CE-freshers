@@ -2819,6 +2819,15 @@ body.light-theme .skeleton::after {
    Achievement Photo Gallery Grid
    ========================================================================== */
 
+/* Override the default premium-note-card for achievements so the gallery
+   is never clipped and gets enough width for the 3-column grid */
+.achievements-note-card {
+  overflow: visible !important;
+  max-width: 1100px !important;
+  width: 100% !important;
+  text-align: left;
+}
+
 .achievements-gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

@@ -10,8 +10,8 @@
 const achievementsData = [
   {
     id: "A1",
-    title: "Academic Excellence Award",
-    desc: "Recognized for outstanding academic performance in the Civil Engineering department."
+    title: "",
+    desc: "Heartfelt congratulations to the entire team,"
   },
   {
     id: "A2",
