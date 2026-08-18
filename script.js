@@ -783,3 +783,27 @@ function triggerHaptic(pattern = 15) {
   }
 }
 
+/* ==========================================================================
+   Achievement Gallery — Data Injector
+   Reads from achievements-data.js and populates title/desc on each card.
+   ========================================================================== */
+(function injectAchievementData() {
+  if (typeof achievementsData === 'undefined') return;
+
+  achievementsData.forEach(function (item) {
+    var card = document.querySelector('[data-achievement-id="' + item.id + '"]');
+    if (!card) return;
+
+    var titleEl = card.querySelector('.achievement-gallery-title');
+    var descEl  = card.querySelector('.achievement-gallery-desc');
+    var overlay = card.querySelector('.achievement-gallery-overlay');
+
+    if (titleEl) titleEl.textContent = item.title || '';
+    if (descEl)  descEl.textContent  = item.desc  || '';
+
+    // If no title AND no desc, hide the text overlay (photo-only mode)
+    if (!item.title && !item.desc && overlay) {
+      overlay.style.display = 'none';
+    }
+  });
+})();
