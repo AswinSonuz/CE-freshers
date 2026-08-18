@@ -15,33 +15,33 @@ const achievementsData = [
   },
   {
     id: "A2",
-    title: "National Level Competition",
-    desc: "Secured top position at the national level inter-collegiate engineering competition."
+    title: "Advika '26",
+    desc: "Secured 2nd Position In OPPANA."
   },
   {
     id: "A3",
-    title: "Project Innovation Award",
-    desc: "Awarded for an innovative structural design project presented at the state symposium."
+    title: "Advika '26",
+    desc: "Secured 1st Position In Bharathanatyam."
   },
   {
     id: "A4",
-    title: "Sports Championship",
-    desc: "Champions at the inter-departmental sports meet held during the annual college fest."
+    title: "APJAKTU Interzone",
+    desc: "Champions at the APJAKTU Interzone Kho-Kho Championship."
   },
   {
     id: "A5",
-    title: "Research Paper Publication",
-    desc: "Successfully published a research paper in a nationally recognized engineering journal."
+    title: "",
+    desc: ""
   },
   {
     id: "A6",
-    title: "Cultural Fest Winner",
-    desc: "Stood first in the cultural events category at the university-level annual celebration."
+    title: "Sports Meet",
+    desc: "Individual Champion"
   },
   {
     id: "A7",
-    title: "",
-    desc: ""
+    title: "Advika '26",
+    desc: "Secured 3rd Position In Kollukali."
   },
   {
     id: "A8",
@@ -50,8 +50,8 @@ const achievementsData = [
   },
   {
     id: "A9",
-    title: "",
-    desc: ""
+    title: "Annual Sports Meet",
+    desc: "Womens Overall & Mens Runner up."
   },
   {
     id: "A10",
