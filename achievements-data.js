@@ -16,47 +16,47 @@ const achievementsData = [
   {
     id: "A2",
     title: "Advika '26",
-    desc: "Secured 2nd Position In OPPANA."
+    desc: "Secured 2nd Position In Oppana."
   },
   {
     id: "A3",
     title: "Advika '26",
-    desc: "Secured 1st Position In Bharathanatyam."
+    desc: "Secured 2nd Position In Mime."
   },
   {
     id: "A4",
+    title: "Advika '26",
+    desc: "Secured 1st Position In Bharathanatyam."
+  },
+  {
+    id: "A5",
     title: "APJAKTU Interzone",
     desc: "Champions at the APJAKTU Interzone Kho-Kho Championship."
   },
   {
-    id: "A5",
+    id: "A6",
     title: "",
     desc: ""
   },
   {
-    id: "A6",
+    id: "A7",
     title: "Sports Meet",
     desc: "Individual Champion"
   },
   {
-    id: "A7",
+    id: "A8",
     title: "Advika '26",
     desc: "Secured 3rd Position In Kollukali."
   },
   {
-    id: "A8",
+    id: "A9",
     title: "",
     desc: ""
-  },
-  {
-    id: "A9",
-    title: "Annual Sports Meet",
-    desc: "Womens Overall & Mens Runner up."
   },
   {
     id: "A10",
-    title: "",
-    desc: ""
+    title: "Annual Sports Meet",
+    desc: "Womens Overall & Mens Runner up."
   },
   {
     id: "A11",
